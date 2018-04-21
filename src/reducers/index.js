@@ -30,7 +30,6 @@ export const gameReducer = (state=initialState, action) => {
             });
         }
 
-
         const difference = Math.abs(guess - state.correctAnswer);
         if (difference >= 50) {
             feedback = 'You\'re Ice Cold...';
@@ -41,7 +40,7 @@ export const gameReducer = (state=initialState, action) => {
         } else if (difference >= 1) {
             feedback = 'You\'re Hot!';
         } else {
-            feedback = 'You got it!';
+            feedback = 'You Got It!';
         }
 
         return Object.assign({}, state, {
